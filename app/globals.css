@@ -20,12 +20,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.app-bg {
+.app_bg {
   background: url("/background.svg");
 }
 
 .text_area {
   border-radius: 10px;
-  background: linear-gradient(225deg, #141414, #141414);
+  background: linear-gradient(225deg, #070707, #141414);
   box-shadow: -20px 20px 60px #070707, 20px -20px 60px #000000;
 }

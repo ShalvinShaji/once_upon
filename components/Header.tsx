@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="header flex flex-col justify-center items-center">
+    <div className="header flex flex-col justify-center items-center mt-14 mb-10">
       <p className="text-5xl font-extrabold text-[#e4e4e7] leading-tight">
         Once<span className="text-[#7957A8]">U</span>pon
       </p>
