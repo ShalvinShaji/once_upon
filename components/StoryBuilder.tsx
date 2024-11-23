@@ -1,11 +1,15 @@
 import React from "react";
+import StoryPrompt from "./StoryPrompt";
+import Button from "./Button";
+import Dropdown from "./Dropdown";
 const StoryBuilder = () => {
   return (
-    <div>
-      <h1 className="text-wrap">
-        "Oops! 🚧 Our Website is Still Under Construction{" "}
-        <span className="animate-pulse">!</span> "
-      </h1>
+    <div className="p-4">
+      <StoryPrompt />
+      <div className="flex justify-center items-center">
+        <Dropdown />
+        <Button />
+      </div>
     </div>
   );
 };
