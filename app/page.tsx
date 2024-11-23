@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import StoryBuilder from "@/components/StoryBuilder";
 
 import Loader from "@/components/Loader"; // Import the loader component
+import CreatedStories from "@/components/CreatedStories";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,11 +28,14 @@ export default function Home() {
         <Loader />
       ) : (
         <>
-          <div className="flex-1 flex items-center justify-center">
+          <div className="">
             <Header />
           </div>
-          <div className="flex-1 flex items-start justify-center">
+          <div className="">
             <StoryBuilder />
+          </div>
+          <div>
+            <Footer />
           </div>
         </>
       )}
