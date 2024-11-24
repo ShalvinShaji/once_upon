@@ -6,10 +6,25 @@ import Dropdown from "./Dropdown";
 
 const StoryBuilder = () => {
   const [selectedNumber, setSelectedNumber] = useState<number | null>(null);
+  const [storyPrompt, setStoryPrompt] = useState<string | null>(null);
+  const handleCreateSrory = (
+    storyPrompt: string | null,
+    selectedNumber: number | null
+  ) => {
+    // Handle the create story logic here
+    console.log(
+      "Create Story about :",
+      storyPrompt,
+      "in",
+      selectedNumber,
+      "pages"
+    );
+  };
 
   return (
     <div className="mb-10 mt-10">
-      <StoryPrompt />
+      <StoryPrompt storyPrompt={storyPrompt} setStoryPrompt={setStoryPrompt} />
+
       <div className="flex justify-center items-center mt-3">
         <Dropdown
           selectedNumber={selectedNumber}
@@ -18,8 +33,10 @@ const StoryBuilder = () => {
         <Button
           id="generateStory"
           buttonText="Generate Story"
-          onClick={() => {}}
-          disabled={selectedNumber === null} // Disable if no page is selected
+          onClick={() => {
+            handleCreateSrory(storyPrompt, selectedNumber);
+          }}
+          disabled={!storyPrompt || selectedNumber === null}
           svgRight={
             <svg
               xmlns="http://www.w3.org/2000/svg"

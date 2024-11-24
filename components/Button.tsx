@@ -8,7 +8,6 @@ interface ButtonProps {
   className?: string;
   svgRight?: any;
   svgLeft?: any;
-  path?: string;
   disabled?: boolean;
 }
 
@@ -19,7 +18,6 @@ const Button: React.FC<ButtonProps> = ({
   className,
   svgRight,
   svgLeft,
-  path,
   disabled,
 }) => {
   return (

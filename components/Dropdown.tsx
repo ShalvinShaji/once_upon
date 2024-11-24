@@ -28,7 +28,9 @@ const Dropdown: React.FC<DropdownProps> = ({
       <Button
         id="dropdownDefaultButton"
         buttonText={
-          selectedNumber !== null ? `Pages: ${selectedNumber}` : "Pages: 0"
+          selectedNumber !== null
+            ? `Pages: ${selectedNumber}`
+            : "Number of pages"
         }
         onClick={toggleDropdown}
       />
