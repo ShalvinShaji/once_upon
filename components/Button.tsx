@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 
 interface ButtonProps {
@@ -6,7 +6,9 @@ interface ButtonProps {
   buttonText: string;
   onClick: () => void;
   className?: string;
-  svg?: any;
+  svgRight?: any;
+  svgLeft?: any;
+  path?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,7 +16,9 @@ const Button: React.FC<ButtonProps> = ({
   buttonText,
   onClick,
   className,
-  svg,
+  svgRight,
+  svgLeft,
+  path,
 }) => {
   return (
     <div className={`relative me-2 group ${className || ""}`}>
@@ -28,8 +32,9 @@ const Button: React.FC<ButtonProps> = ({
         <span className="relative z-10 block px-6 py-3 rounded-xl bg-[#202020]">
           <div className="relative z-10 flex items-center space-x-2">
             <span className="transition-all duration-500 flex items-center justify-center text-sm">
+              {svgLeft}&nbsp;
               {buttonText}&nbsp;
-              {svg}
+              {svgRight}
             </span>
           </div>
         </span>
