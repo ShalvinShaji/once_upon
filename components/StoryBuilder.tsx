@@ -33,7 +33,7 @@ const StoryBuilder = () => {
           }
         />
       </div>
-      <div className="mt-4 lg:mt-0 lg:absolute top-14 right-14 flex justify-center items-center">
+      <div className="z-10 mt-4 lg:mt-0 lg:absolute top-14 right-14 flex justify-center items-center">
         <Link href="/stories">
           <Button
             id="browseStories"

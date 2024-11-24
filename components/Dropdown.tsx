@@ -16,7 +16,7 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left z-40">
       {/* Dropdown Toggle Button */}
       <Button
         id="dropdownDefaultButton"
@@ -30,17 +30,17 @@ const Dropdown = () => {
       {isOpen && (
         <div
           id="dropdown"
-          className="absolute z-10 mt-2 bg-white divide-y divide-gray-400 rounded-lg shadow w-44 dark:bg-[#202020]"
+          className="absolute  mt-2 bg-white divide-y divide-gray-400 rounded-lg shadow w-44 dark:bg-[#202020]"
         >
           <ul
-            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+            className=" py-2 text-sm text-gray-700 dark:text-gray-200"
             aria-labelledby="dropdownDefaultButton"
           >
             {Array.from({ length: 5 }, (_, i) => i + 1).map((number) => (
               <li
                 key={number}
                 onClick={() => handleSelect(number)}
-                className="cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                className=" cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 {number}
               </li>
