@@ -10,7 +10,7 @@ const Header = () => {
       <p className="bg-[#e4e4e7] font-bold	 text-[#0a0a0a] text-lg px-2 py-1 rounded-lg">
         AI Story <span className="">Builder</span>
       </p>
-      <div className="flex  justify-center items-center mt-5">
+      <div className="flex  justify-center items-center">
         <Navigation />
       </div>
     </div>
