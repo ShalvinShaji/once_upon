@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
 }) => {
   return (
-    <div className={`relative me-2 group ${className || ""}`}>
+    <div className={`relative group ${className || ""}`}>
       <button
         disabled={disabled}
         id={id}
@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
                 : "bg-purple-500 hover:bg-purple-600 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
             }`}
       >
-        <span className="relative  block px-6 py-3 rounded-xl bg-[#202020]">
+        <span className="relative  block p-3 rounded-xl bg-[#202020]">
           <div className="  flex items-center justify-center space-x-2 text-sm">
             {svgLeft && (
               <div className="  flex items-center justify-center">
