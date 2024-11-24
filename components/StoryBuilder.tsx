@@ -1,19 +1,26 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import StoryPrompt from "./StoryPrompt";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
 import Link from "next/link";
+
 const StoryBuilder = () => {
+  const [selectedNumber, setSelectedNumber] = useState<number | null>(null);
+
   return (
     <div className="mb-10 mt-10">
       <StoryPrompt />
       <div className="flex justify-center items-center mt-3">
-        <Dropdown />
+        <Dropdown
+          selectedNumber={selectedNumber}
+          setSelectedNumber={setSelectedNumber}
+        />
         <Button
           id="generateStory"
           buttonText="Generate Story"
           onClick={() => {}}
+          disabled={selectedNumber === null} // Disable if no page is selected
           svgRight={
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -9,6 +9,7 @@ interface ButtonProps {
   svgRight?: any;
   svgLeft?: any;
   path?: string;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,13 +20,20 @@ const Button: React.FC<ButtonProps> = ({
   svgRight,
   svgLeft,
   path,
+  disabled,
 }) => {
   return (
     <div className={`relative me-2 group ${className || ""}`}>
       <button
+        disabled={disabled}
         id={id}
         onClick={onClick}
-        className="relative  p-px flex items-center justify-center leading-6 text-white  shadow-2xl cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+        className={`relative p-px flex items-center justify-center leading-6 text-white shadow-2xl rounded-xl 
+            ${
+              disabled
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-purple-500 hover:bg-purple-600 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+            }`}
       >
         <span className="absolute inset-0 rounded-xl  p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
