@@ -26,10 +26,12 @@ const StoryBuilder = () => {
       <StoryPrompt storyPrompt={storyPrompt} setStoryPrompt={setStoryPrompt} />
 
       <div className="flex justify-center items-center mt-3">
-        <Dropdown
-          selectedNumber={selectedNumber}
-          setSelectedNumber={setSelectedNumber}
-        />
+        <div>
+          <Dropdown
+            selectedNumber={selectedNumber}
+            setSelectedNumber={setSelectedNumber}
+          />
+        </div>
         <div className="ms-3">
           <Button
             id="generateStory"
