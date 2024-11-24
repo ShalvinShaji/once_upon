@@ -3,8 +3,8 @@ import React from "react";
 
 interface ButtonProps {
   id?: string;
-  buttonText: string;
-  onClick: () => void;
+  buttonText?: string;
+  onClick?: () => void;
   className?: string;
   svgRight?: any;
   svgLeft?: any;
@@ -35,15 +35,23 @@ const Button: React.FC<ButtonProps> = ({
                 : "bg-purple-500 hover:bg-purple-600 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
             }`}
       >
-        <span className="absolute inset-0 rounded-xl  p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-
-        <span className="relative z-10 block px-6 py-3 rounded-xl bg-[#202020]">
-          <div className="relative z-10 flex items-center space-x-2">
-            <span className="transition-all duration-500 flex items-center justify-center text-sm">
-              {svgLeft}&nbsp;
-              {buttonText}&nbsp;
-              {svgRight}
-            </span>
+        <span className="relative  block px-6 py-3 rounded-xl bg-[#202020]">
+          <div className="  flex items-center justify-center space-x-2 text-sm">
+            {svgLeft && (
+              <div className="  flex items-center justify-center">
+                {svgLeft}&nbsp;
+              </div>
+            )}
+            {buttonText && (
+              <div className="  flex items-center justify-center">
+                {buttonText}&nbsp;
+              </div>
+            )}
+            {svgRight && (
+              <div className="  flex items-center justify-center">
+                {svgRight}
+              </div>
+            )}
           </div>
         </span>
       </button>

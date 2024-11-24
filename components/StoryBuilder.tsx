@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import StoryPrompt from "./StoryPrompt";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
-import Link from "next/link";
 
 const StoryBuilder = () => {
   const [selectedNumber, setSelectedNumber] = useState<number | null>(null);
@@ -39,36 +38,6 @@ const StoryBuilder = () => {
             </svg>
           }
         />
-      </div>
-      <div className="z-10 mt-4 lg:mt-0 lg:absolute top-14 right-14 flex justify-center items-center">
-        <Link href="/stories">
-          <Button
-            id="browseStories"
-            buttonText="Read created stories"
-            onClick={() => {}}
-            svgRight={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-book-open-text"
-              >
-                <path d="M12 7v14" />
-                <path d="M16 12h2" />
-                <path d="M16 8h2" />
-                <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-                <path d="M6 12h2" />
-                <path d="M6 8h2" />
-              </svg>
-            }
-          />
-        </Link>
       </div>
     </div>
   );
